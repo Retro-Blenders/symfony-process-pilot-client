@@ -12,7 +12,8 @@
     "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
     "retro-blenders/process-pilot-client": "*",
     "symfony/http-kernel": "*",
-    "symfony/dependency-injection": "*"
+    "symfony/dependency-injection": "*",
+    "symfony/config": "*"
   },
   "minimum-stability": "dev",
   "autoload": {

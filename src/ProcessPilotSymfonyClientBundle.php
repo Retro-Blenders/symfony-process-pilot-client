@@ -2,9 +2,9 @@
 
 namespace ProcessPilot\Symfony\Client;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class ProcessPilotSymfonyClientBundle extends Bundle
+class ProcessPilotSymfonyClientBundle extends AbstractBundle
 {
 
 }
