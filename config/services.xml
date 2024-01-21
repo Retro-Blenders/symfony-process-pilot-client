@@ -5,7 +5,7 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="process_pilot.client.settings" class="ProcessPilot\Client\Settings" />
+        <service id="ProcessPilot\Client\Settings" />
     </services>
 
 </container>
