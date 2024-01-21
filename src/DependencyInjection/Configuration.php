@@ -14,9 +14,9 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('host')->end()
-                ->scalarNode('project_id')->end()
-                ->scalarNode('project_hash')->end()
+                ->scalarNode('host')->defaultValue('no-host')->end()
+                ->scalarNode('project_id')->defaultValue('no-id')->end()
+                ->scalarNode('project_hash')->defaultValue('no-hash')->end()
                 ->booleanNode('enabled')->defaultTrue()->end()
             ->end()
         ;
