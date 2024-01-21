@@ -7,6 +7,9 @@
     <services>
         <service id="process_pilot.client.settings" class="ProcessPilot\Client\Settings" />
         <service id="process_pilot.client.error_handler" class="ProcessPilot\Client\ErrorHandler" />
+
+        <service id="ProcessPilot\Client\Settings" alias="process_pilot.client.settings" public="true"/>
+        <service id="ProcessPilot\Client\ErrorHandler" alias="process_pilot.client.error_handler" public="true"/>
     </services>
 
 </container>
