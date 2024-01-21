@@ -16,7 +16,9 @@ final class ProcessPilotSymfonyClientExtension extends Extension
 
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
-        var_dump($config);die;
+
+
+
     }
 
     public function getAlias(): string
