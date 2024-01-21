@@ -13,6 +13,10 @@ final class ProcessPilotSymfonyClientExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(dirname(__DIR__, 2) . '/config/'));
         $loader->load('services.xml');
+
+        $configuration = $this->getConfiguration($configs, $container);
+        $config = $this->processConfiguration($configuration, $configs);
+        var_dump($config);die;
     }
 
     public function getAlias(): string
