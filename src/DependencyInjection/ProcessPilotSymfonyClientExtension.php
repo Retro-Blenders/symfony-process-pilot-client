@@ -22,7 +22,6 @@ final class ProcessPilotSymfonyClientExtension extends Extension
         $definition->addMethodCall('setProjectHash', [$config['project_hash']]);
         $definition->addMethodCall('setHost', [$config['host']]);
         $definition->addMethodCall('setEnabled', [$config['enabled']]);
-
     }
 
     public function getAlias(): string
