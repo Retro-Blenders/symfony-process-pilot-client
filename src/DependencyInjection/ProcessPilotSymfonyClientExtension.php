@@ -16,6 +16,13 @@ final class ProcessPilotSymfonyClientExtension extends Extension
 
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
+
+        $definition = $container->getDefinition('process_pilot.client.settings');
+        $definition->addMethodCall('setProjectId', $config['project_id']);
+        $definition->addMethodCall('setProjectHash', $config['project_hash']);
+        $definition->addMethodCall('setHost', $config['host']);
+        $definition->addMethodCall('setEnabled', $config['enabled']);
+
     }
 
     public function getAlias(): string
