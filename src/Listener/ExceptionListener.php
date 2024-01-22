@@ -2,12 +2,14 @@
 
 namespace ProcessPilot\Symfony\Client\Listener;
 
-class ExceptionListener
-{
-    public function onKernelException(ExceptionEvent $event)
-    {
-        $exception = $event->getException();
+use ProcessPilot\Client\Service\PilotClientService;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 
-        var_dump($exception);
+final class ExceptionListener
+{
+    public function onKernelException(ExceptionEvent $event): void
+    {
+        $pilotService = PilotClientService::getInstance();
+        $pilotService->sendToServer($event->getThrowable());
     }
 }
