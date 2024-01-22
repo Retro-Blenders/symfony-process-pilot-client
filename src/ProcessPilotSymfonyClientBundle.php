@@ -28,7 +28,8 @@ final class ProcessPilotSymfonyClientBundle extends Bundle
         $pilotClientService = PilotClientService::getInstance();
         $pilotClientService::setSettings($settings);
 
-        ErrorHandler::registerErrorHandler();
-        ErrorHandler::registerShutdownHandler();
+        if ($settings->isEnabled()) {
+            ErrorHandler::registerShutdownHandler();
+        }
     }
 }
