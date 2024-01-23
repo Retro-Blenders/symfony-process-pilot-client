@@ -18,6 +18,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('project_id')->defaultValue('no-id')->end()
                 ->scalarNode('project_hash')->defaultValue('no-hash')->end()
                 ->booleanNode('enabled')->defaultTrue()->end()
+                ->booleanNode('session_payload')->defaultFalse()->end()
             ->end()
         ;
 
